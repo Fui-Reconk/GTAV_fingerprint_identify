@@ -1,6 +1,43 @@
+# ==================== Python 字节码 / 各类缓存 ====================
 __pycache__/
-FingerPrint/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==================== 虚拟环境 ====================
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+
+# ==================== PyInstaller 打包产物 ====================
 build/
 dist/
-*.code-workspace
+# 打包配置文件 *.spec 目前也忽略；如果你希望把它纳入版本管理，
+# 删掉下面这行，再执行 git add -f "GTAOL赌场指纹破解小助手.spec"
 *.spec
+
+# ==================== 编辑器 / 操作系统 ====================
+.vscode/
+.idea/
+*.code-workspace
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ==================== 运行时 / 调试产物 ====================
+*.log
+*.tmp
+# 界面设置（快捷键、操作间隔）
+config.json
+config.json.tmp
+# pic.py 直接运行（python pic.py）时存下来的调试图，
+# 是整屏游戏画面，不该进仓库
+_debug_*.png
+# calibrate.py --test-dir 用的真实截图目录。
+# 想让别人也能用你的截图校准，就把下面这行删掉。
+test/
